@@ -311,24 +311,4 @@ func (blocklist *blockchain) AddBlock(x int) *block {
 	return tempblock
 }
 
-func main() {
 
-	chain := new(blockchain)
-	var x = 0
-	for i := 0; i < 10; i++ {
-		chain.AddBlock(x + i)
-	}
-
-	println("Mining... ")
-	Mineblock(chain)
-
-	//Display Blockchain
-	DisplayBlocks(chain)
-
-	fmt.Println("Changing block with id:", 0)
-	ChangeBlock(chain, 0)
-
-	//Display Blockchain
-	DisplayBlocks(chain)
-
-}
